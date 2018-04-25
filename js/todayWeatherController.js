@@ -5,7 +5,7 @@ angular.module('scotchApp').controller('todayWeatherController', function($scope
 		var settings = {
 		  "async": true,
 		  "crossDomain": true,
-		  "url": "http://api.openweathermap.org/data/2.5/weather?q="+$scope.city+","+$scope.country+"&units=metric&appid=8bdd2ff4a457faa14e4c0bfa45d27223",
+		  "url": "http://api.openweathermap.org/data/2.5/weather?q="+$scope.city+","+$scope.country+"&units=metric&appid={YOUR_WEATHER_API_KEY}",
 		  "method": "GET"
 		}
 
