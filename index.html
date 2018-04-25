@@ -1,0 +1,46 @@
+<!-- index.html -->
+<html ng-app="scotchApp">
+
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="js/asserts/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="js/asserts/angular.js"></script>
+    <script type="text/javascript" src="js/asserts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/asserts/angular-route.js"></script>
+    <script type="text/javascript" src="js/asserts/underscore-min.js"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/dataAnalysisController.js"></script>
+    <script type="text/javascript" src="js/todayWeatherController.js"></script>
+    <script type="text/javascript" src="js/asserts/highcharts.js"></script>
+    <script type="text/javascript" src="js/asserts/exporting.js"></script>
+    
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <div class="sidenav">
+	    <a href="#data" class="clsa">Data Analysis</a>
+	  	<a href="#todaysweather" class="clsb">Today's Weather</a>
+    </div>
+    <div id="main" class="main">
+        <div ng-view></div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".clsa").on("click", function() {
+                $(".clsb").removeClass("active");
+                $(this).addClass('active');
+            });
+            $(".clsb").on("click", function() {
+                $(".clsa").removeClass("active");
+                $(this).addClass('active');
+            });
+        })
+    </script>
+</body>
+
+</html>

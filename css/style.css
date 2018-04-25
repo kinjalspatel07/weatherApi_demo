@@ -1,0 +1,88 @@
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /*background-color: #111;*/
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #111;
+    border: 1px solid #000000;
+    font-family: Arial;
+    display: block;
+}
+
+.active {
+  background-color: #76baf3;
+}
+
+.main {
+    margin-left: 20%; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.progress-indicator {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    /* IE filter */
+    filter: progid: DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.5;
+    /* Mozilla extension */
+    -khtml-opacity: 0.5;
+    /* Safari/Conqueror extension */
+    opacity: 0.7;
+    /* CSS3 */
+    z-index: 2000;
+    background-color: #030303;
+    display: none;
+}
+
+.progress-indicator img {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    height: 60px;
+    width: 60px;
+}
+
+.weather{
+  background-image: url("../img/icons.png");
+  height: 78px;
+  width: 60px;
+}
+
+.weatherClear{
+  background-position-x: -70px;
+}
+
+.weatherRain{
+  background-position-x: -293px;
+  background-position-y: -363px;
+}
+
+.weatherCloud{
+  background-position-x: -70px;
+  background-position-y: -357px;
+}
+
+.weatherNone{
+  background-position-x: -135px;
+  background-position-y: -504px;
+}
